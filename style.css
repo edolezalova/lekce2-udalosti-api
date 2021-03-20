@@ -32,7 +32,12 @@ h6 {
 
 h1 {
 	font-size: 36px;
-	color:cadetblue;
+	color: black;
+}
+pozn:mění všechny h1 
+
+.testovaciNadpis {
+	font-style: italic;
 }
 
 p {
@@ -110,8 +115,12 @@ li {
 
 .zluty {
 	background-color: yellow;
-	color: black;
+	color:red;
 	border-color: orange;
+}
+
+.testovaciTrida {
+	font-style: italic;
 }
 
 .zeleny {
@@ -120,9 +129,20 @@ li {
 	border-color: green;
 }
 
-
 .aktivni {
 	background-color: cyan;
 	color: black;
 	border-color: blue;
+}
+
+.ztucni {
+	font-weight: bold;
+}
+
+.cerveny {
+	color: red;
+}
+
+.vetsiPismo {
+	font-size: +1px;
 }

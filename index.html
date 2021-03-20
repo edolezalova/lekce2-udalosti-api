@@ -9,18 +9,36 @@
 </head>
 <body>
 
-	<h1>Změna tříd, události</h1>
+	<h1 id="hlavniNadpis"
+		>Změna tříd, události</h1>
+
+	<h1 id="testovaciNadpis"
+		>Testovací nadpis</h1>
 		
 	<p 
 		onmouseover="ztucni(event)"
-	>V elipse spí lev.
-	</p>
+		>V elipse spí lev.</p>
+
+	<p	id="testovaciOdstavec"
+		class="aktivni"
+		>Testovací odstavec </p>
 	
+	<button id="tlacitkoZcervenej"
+		>červené po kliknutí
+	</button>
+
+	<button id="tlacitkoVetsi"
+		>větší po kliknutí
+	</button>
+
 	<button 
-		onclick="alert ('ahoj')"
-		onclick="zcervenej (event)"
-		onclick="zmenaNadpisu()"
-	>červený po kliknutí
+		onclick="zezelenej()"
+		>zezelená odstavec
+	</button>
+
+	<button id="testovaciTlacitko"
+			onclick="testovaciFunkce ()"
+			>Testovací tlačítko
 	</button>
 
 	<div class="ctverecek zluty"></div>
