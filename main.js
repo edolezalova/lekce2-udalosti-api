@@ -2,6 +2,7 @@
 
 // leccos jsou jen moje poznámky, abych to chápala i příště, až to otevřu ;-), ale někde mám otázky, kde bych byla vděčná za navedení
 // mám tam spoustu testovacích věcí navíc, na kterých jsem se to učila a nechci to mazat, abych věděla, jak na to 
+// je mi líto, ale nemám tu všechny ty úkoly - k tomu audiu jsem se nedostala, i když jsem tím celým strávila hroznou spoustu času, viz taky úkol k zabřednutí do dokumentace - zkusím to doplnit během zítřka
 
 // jak změnit prvek webu napřímo: nejřív ho vyberu pomocí proměnné z CSS, pak tuto proměnnou upravím jak potřebuju
 let nadpis = document.querySelector("h1");
