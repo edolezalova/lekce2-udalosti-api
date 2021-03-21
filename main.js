@@ -48,9 +48,9 @@ let jesteJednoTlacitko = document.querySelector("#jesteJednoTlacitko");
 jesteJednoTlacitko.addEventListener ("click", zcervenej);
 
 let tlacitkoVetsi = document.querySelector("#tlacitkoVetsi");
-tlacitkoVetsi.addEventListener("click", vetsiPismo)
+tlacitkoVetsi.addEventListener("click", vetsiPismo);
 function vetsiPismo (event) {
-    odstavec.style.fontSize=("larger");
+    odstavec.style.fontSize="larger";
 }
 // ??zvětšila jsem jen jednorázově - nepřišla jsem na to jak přidat při každém kliknutí 1px?? jak ho přičítat? zkoušela jsem různě, i přes css třídu, snažila jsem se to najít v dokumentaci, jestli  by se něco nenašlo, pak mě napadlo to udělat nějakým cyklem, ale nepřišla jsem na to...
 
