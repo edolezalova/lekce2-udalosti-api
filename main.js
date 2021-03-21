@@ -2,7 +2,7 @@
 
 // leccos jsou jen moje poznámky, abych to chápala i příště, až to otevřu ;-), ale někde mám otázky, kde bych byla vděčná za navedení
 // mám tam spoustu testovacích věcí navíc, na kterých jsem se to učila a nechci to mazat, abych věděla, jak na to 
-// je mi líto, ale nemám tu všechny ty úkoly - k tomu audiu jsem se nedostala, i když jsem tím celým strávila hroznou spoustu času, viz taky úkol k zabřednutí do dokumentace - zkusím to doplnit během zítřka
+
 
 // jak změnit prvek webu napřímo: nejřív ho vyberu pomocí proměnné z CSS, pak tuto proměnnou upravím jak potřebuju
 let nadpis = document.querySelector("h1");
@@ -27,12 +27,25 @@ function zmenaTridy (event) {
     testovaciNadpis.classList.toggle("testovaciTrida");
 }
 
+let body = document.querySelector("body");
+body.addEventListener("keydown", vypisKlavesu);
+function vypisKlavesu (event) {
+    console.log(event.key);
+    if (event.key==="Enter") {
+        alert("děkuji za potvrzení");
+    }
+}
+
 let odstavec = document.querySelector("p");
 let tlacitko = document.querySelector("#tlacitkoZcervenej");
 tlacitko.addEventListener("click",zcervenej);
 function zcervenej (event) {
    odstavec.classList.toggle("cerveny");
 }
+
+//stejnou funkci pak můžu použít i jinde
+let jesteJednoTlacitko = document.querySelector("#jesteJednoTlacitko");
+jesteJednoTlacitko.addEventListener ("click", zcervenej);
 
 let tlacitkoVetsi = document.querySelector("#tlacitkoVetsi");
 tlacitkoVetsi.addEventListener("click", vetsiPismo)
@@ -69,6 +82,42 @@ function ztucni(odstavec) {
 }
 
 
+//ovládíní audiosouboru
+let tlacitkoPlay = document.querySelector ("#play");
+let audioSoubor = document.querySelector ("#audioSoubor");
+tlacitkoPlay.addEventListener ("click", prehraj);
+function prehraj (event) {
+    audioSoubor.play ();
+}
 
+let tlacitkoPause = document.querySelector ("#pause");
+tlacitkoPause.addEventListener ("click", pauzniTo);
+function pauzniTo (event) {
+    audioSoubor.pause ();
+}
 
+let tlacitkoMute = document.querySelector ("#mute");
+tlacitkoMute.addEventListener ("click", ztisTo);
+function ztisTo (event) {
+    audioSoubor.volume="0";
+}
+
+let tlacitkoNaPolovic = document.querySelector ("#naPolovic");
+tlacitkoNaPolovic.addEventListener ("click", zeslabTo);
+function zeslabTo (event) {
+    audioSoubor.volume="0.5";
+}
+
+let tlacitkoNaMax = document.querySelector ("#naMax");
+tlacitkoNaMax.addEventListener ("click", zesilTo);
+function zesilTo (event) {
+    audioSoubor.volume="1";
+}
+
+let tlacitkoReload=document.querySelector("#reload");
+tlacitkoReload.addEventListener("click", pustoToZnovu);
+function pustoToZnovu (event) {
+    audioSoubor.currentTime="0";
+    audioSoubor.play ();
+}
 
